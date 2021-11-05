@@ -1,30 +1,21 @@
-function sendMail()
+function send_mail(params)
 {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var subject = document.getElementById("subject").value;
-  var message = document.getElementById("message").value;
+  var tempParams = {
+    from_email : document.getElementById("from_email").value,
+    to_email : document.getElementById("to_email").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value,
+  };
 
-  var Body = "name:"+ name +"<br/>Email:"+email+"<br/>Subject:"+subject+"<br/>Message:"+message;
-}
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "letrunghan99@gmail.com",
-    Password : "nhan0135792468",
-    To : 'letrungnhan99@gmail.com',
-    From : email,
-    Subject : "Email from"+name,
-    Body : Body
-}).then(
-  message => {
-    if(message == "OK")
+  emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
+    if(res.status == 200)
     {
-      alert('Your email sent');
+     alert('Your mail was send to letrungnhan99@gmail.com');
     }
     else
     {
-      console.error(message);
-       alert('Error');
+      alert("Sorry, there was an error");
     }
+   // console.log('success',res.status);
   });
-
+}
