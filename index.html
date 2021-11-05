@@ -26,20 +26,21 @@
 
 </head>
 <body>
-<div class="container-fluid">
-	<section id="header">
-		<nav id="menu" class="row">
+	<nav id="menu" class="row">
 				<div id="menu_left"></div>
 				<div id="menu_right">
 					<ul>
-						<li><a>ABOUT</a></li>
-						<li><a>SKILLS</a></li>
-						<li><a>PORTFOLIO</a></li>
-						<li><a>EXPERIENCE</a></li>
-						<li><a>CONTACT</a></li>
+						<li><a id="link_about">ABOUT</a></li>
+						<li><a id="link_skill">SKILLS</a></li>
+						<li><a id="link_edu">EDUCATION</a></li>
+						<li><a id="link_exp">EXPERIENCE</a></li>
+						<li><a id="link_contact">CONTACT</a></li>
 					</ul>
 				</div>
 		</nav>
+<div class="container-fluid">
+	<section id="header">
+		<div id="space_menu"></div>
 
 		<div id="info">
 			<img id="avatar" src="public/images/ok.jpg"/>
@@ -55,7 +56,10 @@
 			<a href=""><i class="fab fa-google-plus-g"></i></a>&emsp;
 		</div>
 	</section>
+	<!-----END HEADER---->
+	<span id="area_about"></span>
 	<br/><br/><br/><br/>
+	
 	<div class="box container" data-aos="fade-up">
 		<section id="info_about" class="row">
 			<div class="col-lg-6">
@@ -111,6 +115,8 @@ D14/399, Hamlet 4, Da Phuoc Commune, Binh Chanh District, Ho Chi Minh City.</div
 		<!----END ABOUT----->
 		<br/>
 	</div>
+	<!----END ABOUT----->
+	<span id="area_skill"></span>
 	<br/><br/><br/>
 	<!----Professional Skills---->
 	<h3 class="text-center">Professional Skills</h3>
@@ -140,6 +146,7 @@ D14/399, Hamlet 4, Da Phuoc Commune, Binh Chanh District, Ho Chi Minh City.</div
 		</section>
 	</div>
 	<!-----end professional skills------>
+	<span id="area_edu"></span>
 	<br/><br/><br/>
 	<!----Education---->
 	<h3 class="text-center">Education</h3>
@@ -165,6 +172,7 @@ D14/399, Hamlet 4, Da Phuoc Commune, Binh Chanh District, Ho Chi Minh City.</div
 		</div>
 	</div>
 	<!-----end education----->
+	<span id="area_exp"></span>
 	<br/><br/><br/>
 	<!----Work experience---->
 	<h3 class="text-center">Work experience</h3>
@@ -197,6 +205,7 @@ MySQL
 		</div>
 	</div>
 	<!-----end exp----->
+	<span id="area_contact"></span>
 	<br/><br/><br/>
 	<!----------CONTACT----------->
 	<div id="contact" class="row justify-content-center align-items-center">
@@ -210,7 +219,7 @@ MySQL
 			<i class="far fa-envelope"></i><input id="from_email" type="email" name="from_email" required placeholder="Enter your email"/><br/><br/>
 		 	<i class="far fa-file-alt"></i><input id="subject" type="text" name="subject" required placeholder="Enter subject" /><br/><br/>
 		 	&emsp;<textarea id="message" name="message" placeholder="Message here"></textarea><br/><br/>
-		 	<button class="btn_send-mail" type="button" onclick="send_mail()">Send</button>
+		 	&emsp;<button class="btn_send-mail" type="button" onclick="send_mail()">Send</button>
 		 	</div>
 		 	<div class="box_mail-right">
 		 		<strong>Address</strong><br/>D14/399, Hamlet 4, Da Phuoc Commune, Binh Chanh District, Ho Chi Minh City.
@@ -232,6 +241,56 @@ MySQL
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
  <script>
     AOS.init();
+ </script>
+ <script type="text/javascript">
+ 	//Scroll 400px menu đổi màu background và ngược lại
+ 	var menu = document.getElementById("menu");
+ 	window.addEventListener('scroll', function(){
+ 		if(window.scrollY > 400)
+ 		{
+ 			menu.style.backgroundColor = '#776CE1';
+ 			menu.style.border = '1px solid white';
+ 			menu.style.transition = '0.5s';
+
+ 		}
+ 		else
+ 		{
+ 			menu.style.backgroundColor = 'transparent';
+ 			menu.style.border = 'none';
+ 			menu.style.transition = '0.5s';
+ 		}
+ 	});
+
+
+ 	//Nhấn link trên menu sẽ nhảy tới khu vực nội dung tương ứng
+ 	var link_about = document.getElementById("link_about");
+ 	var link_skill = document.getElementById("link_skill");
+ 	var link_exp = document.getElementById("link_exp");
+ 	var link_edu = document.getElementById("link_edu");
+ 	var link_contact = document.getElementById("link_contact");
+
+ 	var area_about = document.getElementById("area_about");
+ 	var area_skill = document.getElementById("area_skill");
+ 	var area_exp = document.getElementById("area_exp");
+ 	var area_edu = document.getElementById("area_edu");
+ 	var area_contact = document.getElementById("area_contact");
+
+ 	link_about.addEventListener('click',function(){
+ 		area_about.scrollIntoView();
+ 	});
+ 	link_skill.addEventListener('click',function(){
+ 		area_skill.scrollIntoView();
+ 	});
+ 	link_exp.addEventListener('click',function(){
+ 		area_exp.scrollIntoView();
+ 	});
+ 	link_edu.addEventListener('click',function(){
+ 		area_edu.scrollIntoView();
+ 	});
+ 	link_contact.addEventListener('click',function(){
+ 		area_contact.scrollIntoView();
+ 	});
+
  </script>
 </body>
 </html>
