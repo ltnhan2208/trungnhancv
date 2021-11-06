@@ -27,7 +27,10 @@
 </head>
 <body>
 	<nav id="menu" class="row">
-				<div id="menu_left"></div>
+				<div id="menu_left">
+					<ul>
+						<li><a id="link_top">MY CV</a></li>
+					</ul></div>
 				<div id="menu_right">
 					<ul>
 						<li><a id="link_about">ABOUT</a></li>
@@ -43,7 +46,7 @@
 		<div id="space_menu"></div>
 
 		<div id="info">
-			<img id="avatar" src="public/images/ok.jpg"/>
+			<a id="frame_avatar"><img id="avatar" src="public/images/ok.jpg"/></a>
 			<br/><br/>
 			<h2>Lê Trung Nhân</h2>
 			<text>Intern PHP</text>
@@ -209,7 +212,7 @@ MySQL
 	<br/><br/><br/>
 	<!----------CONTACT----------->
 	<div id="contact" class="row justify-content-center align-items-center">
-		<div id="box_mail">
+		<div id="box_mail" data-aos="zoom-in">
 			<h3 class="text-center">Contact Me</h3>
 			<br/>
 			<div class="form_mail">
@@ -263,18 +266,25 @@ MySQL
 
 
  	//Nhấn link trên menu sẽ nhảy tới khu vực nội dung tương ứng
+ 	
+ 	var link_top = document.getElementById("link_top");
  	var link_about = document.getElementById("link_about");
  	var link_skill = document.getElementById("link_skill");
  	var link_exp = document.getElementById("link_exp");
  	var link_edu = document.getElementById("link_edu");
  	var link_contact = document.getElementById("link_contact");
 
+ 	var header = document.getElementById("header");
  	var area_about = document.getElementById("area_about");
  	var area_skill = document.getElementById("area_skill");
  	var area_exp = document.getElementById("area_exp");
  	var area_edu = document.getElementById("area_edu");
  	var area_contact = document.getElementById("area_contact");
 
+
+ 	link_top.addEventListener('click',function(){
+ 		header.scrollIntoView();
+ 	});
  	link_about.addEventListener('click',function(){
  		area_about.scrollIntoView();
  	});
