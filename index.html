@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lê Trung Nhân - CV</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 	<link rel="stylesheet" href="public/lib/bootstrap/css/bootstrap.min.css">
@@ -30,8 +31,16 @@
 				<div id="menu_left">
 					<ul>
 						<li><a id="link_top">MY CV</a></li>
-					</ul></div>
+					</ul>
+				</div>
 				<div id="menu_right">
+					<input id="active_menu" hidden type="checkbox" />
+					<div id="div_bar-menu"><label id="bar_menu" for="active_menu">
+						<div class="border_bar"> </div>
+						<div class="border_bar"> </div>
+						<div class="border_bar"> </div>
+					</label></div>
+					<div id="list_menu">
 					<ul>
 						<li><a id="link_about">ABOUT</a></li>
 						<li><a id="link_skill">SKILLS</a></li>
@@ -39,6 +48,7 @@
 						<li><a id="link_exp">EXPERIENCE</a></li>
 						<li><a id="link_contact">CONTACT</a></li>
 					</ul>
+					</div>
 				</div>
 		</nav>
 <div class="container-fluid">
@@ -49,13 +59,13 @@
 			<a id="frame_avatar"><img id="avatar" src="public/images/ok.jpg"/></a>
 			<br/><br/>
 			<h2>Lê Trung Nhân</h2>
-			<text>Intern PHP</text>
+			<text>INTERN PHP DEVELOPER</text>
 			<br/><br/>
-			<button id="btn_download">Download CV</button>
+			<button id="btn_download">Hire me</button>
 		</div>
 
 		<div id="social_media">
-			<a href=""><i class="fab fa-facebook-f"></i></a>&emsp;
+			<a href="https://www.facebook.com/le.trungnhan.9"><i class="fab fa-facebook-f"></i></a>&emsp;
 			<a href=""><i class="fab fa-google-plus-g"></i></a>&emsp;
 		</div>
 	</section>
@@ -70,13 +80,14 @@
 				<br/>
 				<p>
 					- Apply the knowledge learned about website programming to the real environment, along with the understanding of the learning process to contribute to improving the professional level along with the development of the company.
-<br/>
-- Be able to work officially, become a professional programmer, good at the company's skills
-<br/>
-- Short-term target: master the job within 3 months
-<br/>
-- Long-term target: can reach Senior position or higher
+					<br/>
+					- Be able to work officially, become a professional programmer, good at the company's skills
+					<br/>
+					- Short-term target: master the job within 3 months
+					<br/>
+					- Long-term target: can reach Senior position or higher
 				</p>
+				<br/>
 			</div>
 			<div class="col-lg-6">
 				<h4>Basic Information</h4>
@@ -236,71 +247,17 @@ MySQL
 		 	</div>
 		 	<br/><br/>
 		</div>
+		<br/><br/>
 	</div>
 
 </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="public/app.js"></script>
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
  <script>
     AOS.init();
- </script>
- <script type="text/javascript">
- 	//Scroll 400px menu đổi màu background và ngược lại
- 	var menu = document.getElementById("menu");
- 	window.addEventListener('scroll', function(){
- 		if(window.scrollY > 400)
- 		{
- 			menu.style.backgroundColor = '#776CE1';
- 			menu.style.border = '1px solid white';
- 			menu.style.transition = '0.5s';
-
- 		}
- 		else
- 		{
- 			menu.style.backgroundColor = 'transparent';
- 			menu.style.border = 'none';
- 			menu.style.transition = '0.5s';
- 		}
- 	});
-
-
- 	//Nhấn link trên menu sẽ nhảy tới khu vực nội dung tương ứng
- 	
- 	var link_top = document.getElementById("link_top");
- 	var link_about = document.getElementById("link_about");
- 	var link_skill = document.getElementById("link_skill");
- 	var link_exp = document.getElementById("link_exp");
- 	var link_edu = document.getElementById("link_edu");
- 	var link_contact = document.getElementById("link_contact");
-
- 	var header = document.getElementById("header");
- 	var area_about = document.getElementById("area_about");
- 	var area_skill = document.getElementById("area_skill");
- 	var area_exp = document.getElementById("area_exp");
- 	var area_edu = document.getElementById("area_edu");
- 	var area_contact = document.getElementById("area_contact");
-
-
- 	link_top.addEventListener('click',function(){
- 		header.scrollIntoView();
- 	});
- 	link_about.addEventListener('click',function(){
- 		area_about.scrollIntoView();
- 	});
- 	link_skill.addEventListener('click',function(){
- 		area_skill.scrollIntoView();
- 	});
- 	link_exp.addEventListener('click',function(){
- 		area_exp.scrollIntoView();
- 	});
- 	link_edu.addEventListener('click',function(){
- 		area_edu.scrollIntoView();
- 	});
- 	link_contact.addEventListener('click',function(){
- 		area_contact.scrollIntoView();
- 	});
-
  </script>
 </body>
 </html>
