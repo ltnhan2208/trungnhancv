@@ -30,7 +30,7 @@
 	position: relative;
 	width: 100%;
 	height: 550px;
-	background-image: url('images/talon.png');
+	background-image: url('images/landbe.png');
 	background-size: cover;
 	background-position: center;
 	z-index: 1;
@@ -157,17 +157,18 @@
 {
 	position: absolute;
 	z-index: 2;
-	width: 150px;
-	height: 150px;
+	width: 155px;
+	height: 155px;
 	border-radius: 360px;
 	transition: all .3s ease-out;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 #avatar:hover
 {
-	width: 165px;
-	height: 165px;
+	width: 170px;
+	height: 170px;
 	transition: all .3s ease-out;
 }
 
@@ -187,7 +188,7 @@
 	font-size: 24px;
 }
 
-#info #btn_download
+#info #btn_hire
 {
 	padding: 5px 40px 5px 40px;
 	color: white;
@@ -198,9 +199,10 @@
 	background-color: var(--secondary);
 	transition: 0.3s;
 	font-size: 18px;
+	cursor: pointer;
 }
 
-#info #btn_download:hover
+#info #btn_hire:hover
 {
 	background-color: var(--twitter);
 	transition: 0.3s;
@@ -215,7 +217,6 @@
 
 #social_media a
 {
-	padding: 17px 20px 17px 20px;
 	background-color: grey;
 	border-radius: 360px;
 }
@@ -226,9 +227,13 @@
 	color: white;
 }
 
+#social_media a:nth-child(1)
+{
+	padding: 17px 21px 17px 21px;
+}
 #social_media a:nth-child(2)
 {
-	padding: 17px 16px 17px 16px;
+	padding: 17px 15px 17px 15px;
 }
 
 #social_media a:hover
@@ -364,7 +369,7 @@
 
 .btn_send-mail
 {
-	padding: 5px 20px 5px 20px;
+	padding: 5px 25px 5px 25px;
 	border: 0;
 	outline: 0;
 	color: white;
@@ -386,6 +391,10 @@
  	width: 80%;
  	font-size: 16px;
  }
+ .box_mail-left input:focus
+ {
+ 	outline:1px solid var(--secondary);
+ }
 
  .box_mail-left textarea 
  {
@@ -394,6 +403,10 @@
  	font-size: 16px;
  	border: 0;
  	border-bottom: 1px solid lightgray;
+ }
+.box_mail-left textarea:focus
+ {
+outline:1px solid var(--secondary);
  }
 
 .btn_send-mail:hover
@@ -411,8 +424,8 @@
 	display: inline-flex;
 	justify-content: space-around;
 	align-items: center;
-	width: 170px;
-	height: 170px;
+	width: 176px;
+	height: 176px;
 	border-radius: 360px;
 	z-index: 1;
 }
@@ -424,8 +437,8 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 170px;
-	height: 170px;
+	width: 176x;
+	height: 176px;
 	border-radius: 360px;
   	animation-name: stretch;
     animation-duration: 2.0s;
@@ -452,13 +465,13 @@
             50% {
                 background-color: var(--secondary);
                border-radius: 100%;
-               opacity: 60%;
+               opacity: 70%;
             }
 
              75% {
                 background-color: var(--secondary);
                border-radius: 100%;
-               opacity: 40%;
+               opacity: 50%;
             }
   
             100% {
@@ -488,6 +501,7 @@
 	#menu #menu_right #bar_menu
 	{
 		font-size: 28px;
+		margin-top: 5px;
 	}
 	#menu #menu_right #div_bar-menu
 	{
@@ -512,7 +526,7 @@
 		background: linear-gradient(to bottom, #4b6cb7, #182848);
 		display: block;
  		position: fixed;
- 		width: 250px;
+ 		width: 270px;
 		top: 0;
  		bottom: 0;
  		right: -340px;
@@ -685,6 +699,7 @@
 	#menu #menu_right #bar_menu
 	{
 		font-size: 28px;
+		margin-top: 6px;
 	}
 	#menu #menu_right #div_bar-menu
 	{

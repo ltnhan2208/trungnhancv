@@ -81,6 +81,7 @@ function send_mail(params)
   //Nhấn link trên menu sẽ nhảy tới khu vực nội dung tương ứng
   
   var link_top = document.getElementById("link_top");
+  var hire_me = document.getElementById("btn_hire");
   var link_about = document.getElementById("link_about");
   var link_skill = document.getElementById("link_skill");
   var link_exp = document.getElementById("link_exp");
@@ -111,5 +112,8 @@ function send_mail(params)
     area_edu.scrollIntoView();
   });
   link_contact.addEventListener('click',function(){
+    area_contact.scrollIntoView();
+  });
+   hire_me.addEventListener('click',function(){
     area_contact.scrollIntoView();
   });
