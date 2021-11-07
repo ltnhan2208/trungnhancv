@@ -42,12 +42,13 @@ function send_mail(params)
     }
     else if(window.innerWidth > 600 && window.innerWidth < 800)
     {
+        window.addEventListener('scroll', function(){
         if(window.scrollY > 100)
         {
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
-
+          console.log(window.scrollY);
         }
         else
         {
@@ -55,15 +56,17 @@ function send_mail(params)
           menu.style.border = 'none';
           menu.style.transition = '0.5s';
         }
+      });
     }
     else
     {
-       if(window.scrollY > 400)
+        window.addEventListener('scroll', function(){
+        if(window.scrollY > 200)
         {
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
-
+          console.log(window.scrollY);
         }
         else
         {
@@ -71,6 +74,7 @@ function send_mail(params)
           menu.style.border = 'none';
           menu.style.transition = '0.5s';
         }
+      });
     }
 
 

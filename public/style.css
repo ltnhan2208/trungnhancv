@@ -344,8 +344,9 @@
 #box_mail
 {
 	padding: 10px;
-	width: 50%;
+	width: 70%;
 	background-color: white;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .form_mail
@@ -382,15 +383,17 @@
  	padding: 7px 15px 4px 30px;
  	border-radius: 20px;
  	border:1px solid lightgray;
- 	width: 250px;
+ 	width: 80%;
  	font-size: 16px;
  }
 
  .box_mail-left textarea 
  {
- 	width: 250px;
+ 	width: 80%;
  	padding: 10px;
  	font-size: 16px;
+ 	border: 0;
+ 	border-bottom: 1px solid lightgray;
  }
 
 .btn_send-mail:hover
@@ -674,24 +677,84 @@
 /* IPAD */
  @media only screen and (min-width: 601px) and (max-width: 800px)
  {
+ #menu_left
+	{
+		display: none;
+	}
+
+	#menu #menu_right #bar_menu
+	{
+		font-size: 28px;
+	}
+	#menu #menu_right #div_bar-menu
+	{
+		display: block;
+		transition: 0.7s;
+		position: relative;
+		top: -10px;
+		left: 10px;
+	}
+	#menu #menu_right #div_bar-menu .border_bar
+	{
+		width: 40px;
+		margin-top: 5px;
+		border-radius: 20px;
+		height: 5px;
+		background-color: white;
+		transition: 0.5s;
+	}
+
+	#menu_right #list_menu
+	{
+		background: linear-gradient(to bottom, #4b6cb7, #182848);
+		display: block;
+ 		position: fixed;
+ 		width: 500px;
+		top: 0;
+ 		bottom: 0;
+ 		right: -500px;
+ 		z-index: 2;
+ 		transition: 0.7s;
+	}
  	#menu #menu_right ul
  	{
- 		display:none;
+ 		list-style: normal;
+ 		padding: 0;
  	}
 
-	#menu #menu_left
+ 	#menu #menu_right ul li
+ 	{
+ 		display: block;
+ 		line-height: 3rem;
+ 		font-size: 20px;
+ 		width: 100%;
+ 	}
+ 	#menu #menu_right ul li a
+ 	{
+ 		width: 100%;
+ 		text-align: left;
+ 	}
+ 	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(1)
+ 	{
+		transform: rotate(50deg);
+		position: absolute;
+		transition: 0.5s;
+ 	}
+ 	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(2)
+ 	{
+		opacity: 0;
+		transition: 0.2s;
+ 	}
+ 	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(3)
+ 	{
+		transform: rotate(-50deg);
+		position: absolute;
+		transition: 0.5s;
+ 	}
+ 	#active_menu:checked ~ #list_menu
 	{
-		width: 20%;
-		padding: 0;
-		margin: 0;
-	}
-	#menu_left ul li a
-	{
-		padding: 0;
-	}
-	#menu #menu_right
-	{
-		width: 80%;
+		right: 0px;
+		transition: 0.7s;
 	}
 
 	#box_mail
