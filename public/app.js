@@ -1,3 +1,9 @@
+  var loader = document.getElementById("preload");
+  window.addEventListener('load',function(){
+    loader.style.display = "none";
+  });
+
+
   var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
   var from_email =  document.getElementById("from_email");
