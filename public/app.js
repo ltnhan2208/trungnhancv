@@ -1,63 +1,104 @@
-function send_mail(params)
-{
-  var from_email =  document.getElementById("from_email").value;
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  var from_email =  document.getElementById("from_email");
   var to_email = "letrungnhan99@gmail.com";
-  var subject = document.getElementById("subject").value;
-  var message = document.getElementById("message").value;
+  var subject = document.getElementById("subject");
+  var message = document.getElementById("message");
 
   var email_error = document.getElementById("email_error");
   var subject_error = document.getElementById("subject_error");
   var message_error = document.getElementById("message_error");
   var send_success = document.getElementById("send_mail-success");
 
-  send_success.innerHTML = "";
-
-  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if(from_email =="")
-  {
-    email_error.innerHTML = "&emsp;Your email is not empty!<br/>";
-  }
-  else if(from_email.match(pattern) == null)
-  {
-   email_error.innerHTML = "&emsp;Please enter valid email address!<br/>";
-  }
-  else if(subject =="")
-  {
-    subject_error.innerHTML = "&emsp;Subject is not empty!<br/>";
-  }
-  else if(message=="")
-  {
-    message_error.innerHTML = "&emsp;Message is not empty!<br/>";
-  }
-  else
-  {
-    email_error.innerHTML ="";
-    subject_error.innerHTML ="";
-    message_error.innerHTML ="";
-
-    var tempParams = {
-    from_email : from_email,
-    to_email : to_email,
-    subject : subject,
-    message : message,
-    };
-
-    emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
-    if(res.status == 200)
+  from_email.onblur = function(){
+    send_success.innerHTML = "";
+     if(from_email.value =="")
+      {
+        email_error.innerHTML = "&emsp;Your email is not empty!<br/>";
+        from_email.style.border = '2px solid red';
+      }
+      else if(from_email.value.match(pattern) == null)
+      {
+       email_error.innerHTML = "&emsp;Please enter valid email address!<br/>";
+       from_email.style.border = '2px solid red';
+      }
+      else
+      {
+        email_error.innerHTML="";
+        from_email.style.border = '2px solid green';
+      }
+  };
+  
+   subject.onblur = function(){
+    send_success.innerHTML = "";
+    if(subject.value =="")
     {
-      document.getElementById("from_email").value="";
-      document.getElementById("subject").value="";
-      document.getElementById("message").value="";
-     send_success.innerHTML = "Your mail was send success.";
+      subject_error.innerHTML = "&emsp;Subject is not empty!<br/>";
+      subject.style.border = '2px solid red';
+    }
+     else
+      {
+       subject_error.innerHTML="";
+       subject.style.border = '2px solid green';
+      }
+  };
+
+  message.onblur = function(){
+    send_success.innerHTML = "";
+    if(message.value=="")
+    {
+      message_error.innerHTML = "&emsp;Message is not empty!<br/>";
+      message.style.border = '2px solid red';
+    }
+     else
+      {
+        message_error.innerHTML="";
+        message.style.border = '2px solid green';
+      }
+  };
+
+  function send_mail(params)
+  {
+    if(from_email.value =="" ||from_email.value.match(pattern) == null|| subject.value ==""|| message.value=="")
+    {
+      send_success.innerHTML ="Thông tin không hợp lệ!";
+      send_success.style.color = "red";
     }
     else
     {
-      send_success.innerHTML = "Sorry, there were some problems.";
+      var tempParams = {
+      from_email : from_email.value,
+      to_email : to_email.value,
+      subject : subject.value,
+      message : message.value,
+      };
+
+      emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
+      if(res.status == 200)
+      {
+        from_email.value ="";
+        subject.value="";
+        message.value="";
+
+        from_email.style.border = '1px solid black';
+        subject.style.border = '1px solid black';
+        message.style.border = '1px solid black';
+
+       send_success.innerHTML = "Your mail was send success.";
+       send_success.style.color = "green";
+      }
+      else
+      {
+        send_success.innerHTML = "Sorry, there were some problems.";
+      }
+     // console.log('success',res.status);
+    });
     }
-   // console.log('success',res.status);
-  });
   }
-}
+
+
+
+
 
   //Scroll 400px menu đổi màu background và ngược lại
   var menu = document.getElementById("menu");
