@@ -229,10 +229,19 @@ MySQL
 			<div class="form_mail">
 			<div class="box_mail-left">
 			&emsp;<strong>Feel free to contact me</strong>
-			<input id="to_email" hidden type="email" name="to_email" required value="letrungnhan99@gmail.com"/><br/><br/>
-			<i class="far fa-envelope"></i><input id="from_email" type="email" name="from_email" required placeholder="Enter your email"/><br/><br/>
-		 	<i class="far fa-file-alt"></i><input id="subject" type="text" name="subject" required placeholder="Enter subject" /><br/><br/>
-		 	&emsp;<textarea id="message" name="message" placeholder="Message here"></textarea><br/><br/>
+			<br/><br/>
+			<i class="far fa-envelope"></i><input id="from_email" type="email" name="from_email" required placeholder="Enter your email"/>
+			<br/>
+			<span id="email_error"></span>
+			<br/>
+		 	<i class="far fa-file-alt"></i><input id="subject" type="text" name="subject" required placeholder="Enter subject" />
+		 	<br/>
+		 	<span id="subject_error"></span>
+		 	<br/>
+		 	&emsp;<textarea id="message" name="message" placeholder="Message here"></textarea>
+		 	<br/>
+		 	<span id="message_error"></span>
+		 	<br/>
 		 	&emsp;<button class="btn_send-mail" type="button" onclick="send_mail()">Send</button>
 		 	</div>
 		 	<div class="box_mail-right">

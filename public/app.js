@@ -1,13 +1,35 @@
 function send_mail(params)
 {
-  var tempParams = {
-    from_email : document.getElementById("from_email").value,
-    to_email : document.getElementById("to_email").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value,
-  };
+  var from_email =  document.getElementById("from_email").value;
+  var to_email = "letrungnhan99@gmail.com";
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
 
-  emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
+  var email_error = document.getElementById("email_error");
+  var subject_error = document.getElementById("subject_error");
+  var message_error = document.getElementById("message_error");
+  if(from_email =="")
+  {
+   email_error.innerHTML = "&emsp;Không được trống!<br/>";
+  }
+  if(subject =="")
+  {
+    subject_error.innerHTML = "&emsp;Không được trống!<br/>";
+  }
+  if(message=="")
+  {
+    message_error.innerHTML = "&emsp;Không được trống!<br/>";
+  }
+  else
+  {
+    var tempParams = {
+    from_email : from_email,
+    to_email : to_mail,
+    subject : subject,
+    message : message,
+    };
+
+    emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
     if(res.status == 200)
     {
      alert('Your mail was send to letrungnhan99@gmail.com');
@@ -18,6 +40,7 @@ function send_mail(params)
     }
    // console.log('success',res.status);
   });
+  }
 }
 
   //Scroll 400px menu đổi màu background và ngược lại

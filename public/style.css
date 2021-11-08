@@ -414,6 +414,12 @@ outline:1px solid var(--secondary);
 	background-color: var(--twitter);
 }
 
+#email_error,
+#subject_error,
+#message_error
+{
+	color: red;
+}
 
 
 
