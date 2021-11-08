@@ -8,20 +8,33 @@ function send_mail(params)
   var email_error = document.getElementById("email_error");
   var subject_error = document.getElementById("subject_error");
   var message_error = document.getElementById("message_error");
+  var send_success = document.getElementById("send_mail-success");
+
+  send_success.innerHTML = "";
+
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if(from_email =="")
   {
-   email_error.innerHTML = "&emsp;Không được trống!<br/>";
+    email_error.innerHTML = "&emsp;Your email is not empty!<br/>";
+  }
+  else if(from_email.match(pattern) == null)
+  {
+   email_error.innerHTML = "&emsp;Please enter valid email address!<br/>";
   }
   else if(subject =="")
   {
-    subject_error.innerHTML = "&emsp;Không được trống!<br/>";
+    subject_error.innerHTML = "&emsp;Subject is not empty!<br/>";
   }
   else if(message=="")
   {
-    message_error.innerHTML = "&emsp;Không được trống!<br/>";
+    message_error.innerHTML = "&emsp;Message is not empty!<br/>";
   }
   else
   {
+    email_error.innerHTML ="";
+    subject_error.innerHTML ="";
+    message_error.innerHTML ="";
+
     var tempParams = {
     from_email : from_email,
     to_email : to_email,
@@ -32,11 +45,14 @@ function send_mail(params)
     emailjs.send('gmail_cv','template_052geuf',tempParams).then(function(res){
     if(res.status == 200)
     {
-     alert('Your mail was send to letrungnhan99@gmail.com');
+      document.getElementById("from_email").value="";
+      document.getElementById("subject").value="";
+      document.getElementById("message").value="";
+     send_success.innerHTML = "Your mail was send success.";
     }
     else
     {
-      alert("Sorry, there was an error");
+      send_success.innerHTML = "Sorry, there were some problems.";
     }
    // console.log('success',res.status);
   });

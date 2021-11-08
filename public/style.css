@@ -442,6 +442,11 @@ outline:1px solid var(--secondary);
 	color: red;
 }
 
+#send_mail-success
+{
+	color: green;
+}
+
 
 
 /* animation */
