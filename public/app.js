@@ -53,12 +53,20 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
         else
         {
           menu.style.backgroundColor = 'transparent';
           menu.style.border = 'none';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
       });
     }
@@ -70,12 +78,20 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
         else
         {
           menu.style.backgroundColor = 'transparent';
           menu.style.border = 'none';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
       });
     }
@@ -87,12 +103,20 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
         else
         {
           menu.style.backgroundColor = 'transparent';
           menu.style.border = 'none';
           menu.style.transition = '0.5s';
+          menu.style.webkitTransition = '0.5s';
+          menu.style.msTransition = '0.5s';
+          menu.style.MozTransition = '0.5s';
+          menu.style.OTransition = '0.5s';
         }
       });
     }
@@ -118,22 +142,51 @@ function send_mail(params)
 
   link_top.addEventListener('click',function(){
     header.scrollIntoView();
+    header.style.transition = '0.5s';
+    header.style.webkitTransition = '0.5s';
+    header.style.msTransition = '0.5s';
+    header.style.MozTransition = '0.5s';
+    header.style.OTransition = '0.5s';
   });
   link_about.addEventListener('click',function(){
     area_about.scrollIntoView();
+    area_about.style.webkitTransition = '0.5s';
+    area_about.style.msTransition = '0.5s';
+    area_about.style.MozTransition = '0.5s';
+    area_about.style.OTransition = '0.5s';
   });
   link_skill.addEventListener('click',function(){
     area_skill.scrollIntoView();
+    area_skill.style.webkitTransition = '0.5s';
+    area_skill.style.msTransition = '0.5s';
+    area_skill.style.MozTransition = '0.5s';
+    area_skill.style.OTransition = '0.5s';
   });
   link_exp.addEventListener('click',function(){
     area_exp.scrollIntoView();
+    area_exp.style.webkitTransition = '0.5s';
+    area_exp.style.msTransition = '0.5s';
+    area_exp.style.MozTransition = '0.5s';
+    area_exp.style.OTransition = '0.5s';
   });
   link_edu.addEventListener('click',function(){
     area_edu.scrollIntoView();
+    area_edu.style.webkitTransition = '0.5s';
+    area_edu.style.msTransition = '0.5s';
+    area_edu.style.MozTransition = '0.5s';
+    area_edu.style.OTransition = '0.5s';
   });
   link_contact.addEventListener('click',function(){
     area_contact.scrollIntoView();
+    area_contact.style.webkitTransition = '0.5s';
+    area_contact.style.msTransition = '0.5s';
+    area_contact.style.MozTransition = '0.5s';
+    area_contact.style.OTransition = '0.5s';
   });
    hire_me.addEventListener('click',function(){
     area_contact.scrollIntoView();
+    area_contact.style.webkitTransition = '0.5s';
+    area_contact.style.msTransition = '0.5s';
+    area_contact.style.MozTransition = '0.5s';
+    area_contact.style.OTransition = '0.5s';
   });

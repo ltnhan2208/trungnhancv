@@ -165,9 +165,13 @@ html,body
 	width: 155px;
 	height: 155px;
 	border-radius: 360px;
-	transition: all .3s ease-out;
 	cursor: pointer;
 	box-sizing: border-box;
+	transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
 }
 
 #avatar:hover
@@ -175,6 +179,10 @@ html,body
 	width: 170px;
 	height: 170px;
 	transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
 }
 
 #info h2,
@@ -202,15 +210,23 @@ html,body
 	border: 0;
 	outline: none;
 	background-color: var(--secondary);
-	transition: 0.3s;
 	font-size: 18px;
 	cursor: pointer;
+	transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
 }
 
 #info #btn_hire:hover
 {
 	background-color: var(--twitter);
 	transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
 }
 
 #social_media
@@ -454,27 +470,53 @@ outline:1px solid var(--secondary);
   	animation-name: stretch;
     animation-duration: 2.0s;
 	animation-timing-function: ease;
-	animation-direction: alternate;
+	animation-direction: normal;
 	animation-iteration-count: infinite;
 	animation-play-state: running;
 
+	-webkit-animation-name: stretch;
 	-webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: ease;
     -webkit-animation-direction: normal;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-play-state: running;
 
+    -moz-animation-name: stretch;
+	-moz-animation-duration: 1.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-direction: normal;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-play-state: running;
+
+    -ms-animation-name: stretch;
+	-ms-animation-duration: 1.5s;
+    -ms-animation-timing-function: ease;
+    -ms-animation-direction: normal;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-play-state: running;
+
+    -o-animation-name: stretch;
+	-o-animation-duration: 1.5s;
+    -o-animation-timing-function: ease;
+    -o-animation-direction: normal;
+    -o-animation-iteration-count: infinite;
+    -o-animation-play-state: running;
+
 }
  @keyframes stretch {
             0% {
                transform: scale(.5);
+               -ms-transform: scale(.5);
+				-webkit-transform: scale(.5);
+				-moz-transform: scale(.5);
+				-o-transform: scale(.5);
                background-color: var(--secondary);
                border-radius: 100%;
                opacity: 90%;
             }
   
             50% {
-                background-color: var(--secondary);
+               background-color: var(--secondary);
                border-radius: 100%;
                opacity: 70%;
             }
@@ -487,6 +529,10 @@ outline:1px solid var(--secondary);
   
             100% {
                 transform: scale(1.0);
+                -ms-transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				-moz-transform: scale(1.0);
+				-o-transform: scale(1.0);
                 background-color: var(--secondary);
                border-radius: 100%;
                opacity: 0%;
@@ -517,10 +563,14 @@ outline:1px solid var(--secondary);
 	#menu #menu_right #div_bar-menu
 	{
 		display: block;
-		transition: 0.7s;
 		position: relative;
 		top: -10px;
 		left: 10px;
+		transition: 0.7s;
+		-ms-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
 	}
 	#menu #menu_right #div_bar-menu .border_bar
 	{
@@ -530,6 +580,10 @@ outline:1px solid var(--secondary);
 		height: 5px;
 		background-color: white;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
 	}
 
 	#menu_right #list_menu
@@ -565,24 +619,49 @@ outline:1px solid var(--secondary);
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(1)
  	{
 		transform: rotate(50deg);
+		-ms-transform: rotate(50deg);
+		-webkit-transform:rotate(50deg);
+		-moz-transform: rotate(50deg);
+		-o-transform: rotate(50deg);
 		position: absolute;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+
  	}
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(2)
  	{
 		opacity: 0;
 		transition: 0.2s;
+		-ms-transition: 0.2s;
+		-webkit-transition: 0.2s;
+		-moz-transition: 0.2s;
+		-o-transition: 0.2s;
  	}
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(3)
  	{
 		transform: rotate(-50deg);
+		-ms-transform: rotate(-50deg);
+		-webkit-transform:rotate(-50deg);
+		-moz-transform: rotate(-50deg);
+		-o-transform: rotate(-50deg);
 		position: absolute;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
  	}
  	#active_menu:checked ~ #list_menu
 	{
 		right: 0px;
 		transition: 0.7s;
+		-ms-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
 	}
 
  /*	#menu #menu_right ul
@@ -718,10 +797,14 @@ outline:1px solid var(--secondary);
 	#menu #menu_right #div_bar-menu
 	{
 		display: block;
-		transition: 0.7s;
 		position: relative;
 		top: -10px;
 		left: 10px;
+		transition: 0.7s;
+		-ms-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
 	}
 	#menu #menu_right #div_bar-menu .border_bar
 	{
@@ -731,6 +814,10 @@ outline:1px solid var(--secondary);
 		height: 5px;
 		background-color: white;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
 	}
 
 	#menu_right #list_menu
@@ -744,6 +831,10 @@ outline:1px solid var(--secondary);
  		right: -500px;
  		z-index: 2;
  		transition: 0.7s;
+ 		-ms-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
 	}
  	#menu #menu_right ul
  	{
@@ -766,24 +857,48 @@ outline:1px solid var(--secondary);
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(1)
  	{
 		transform: rotate(50deg);
+		-ms-transform: rotate(50deg);
+		-webkit-transform:rotate(50deg);
+		-moz-transform: rotate(50deg);
+		-o-transform: rotate(50deg);
 		position: absolute;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
  	}
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(2)
  	{
 		opacity: 0;
 		transition: 0.2s;
+		-ms-transition: 0.2s;
+		-webkit-transition: 0.2s;
+		-moz-transition: 0.2s;
+		-o-transition: 0.2s;
  	}
  	#active_menu:checked ~ #div_bar-menu .border_bar:nth-child(3)
  	{
 		transform: rotate(-50deg);
+		-ms-transform: rotate(-50deg);
+		-webkit-transform:rotate(-50deg);
+		-moz-transform: rotate(-50deg);
+		-o-transform: rotate(-50deg);
 		position: absolute;
 		transition: 0.5s;
+		-ms-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
  	}
  	#active_menu:checked ~ #list_menu
 	{
 		right: 0px;
 		transition: 0.7s;
+		-ms-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
 	}
 
 	#box_mail
