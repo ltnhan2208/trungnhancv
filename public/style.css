@@ -6,6 +6,11 @@
    -webkit-box-sizing: border-box;
 }
 
+html,body
+{
+	overflow-x: hidden;
+}
+
  :root {
      --dark: #1a253f;
    
@@ -638,12 +643,14 @@ outline:1px solid var(--secondary);
 	{
 		text-align: center;
 		width: 100%;
+		display: block;
 	}
 
 	.exp_item .exp_right,
 	.edu_item .edu_right
 	{
 		width: 100%;
+		display: block;
 	}
 
 	#contact
@@ -697,6 +704,7 @@ outline:1px solid var(--secondary);
 /* IPAD */
  @media only screen and (min-width: 601px) and (max-width: 800px)
  {
+
  #menu_left
 	{
 		display: none;
