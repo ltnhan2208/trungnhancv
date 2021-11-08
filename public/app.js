@@ -12,11 +12,11 @@ function send_mail(params)
   {
    email_error.innerHTML = "&emsp;Không được trống!<br/>";
   }
-  if(subject =="")
+  else if(subject =="")
   {
     subject_error.innerHTML = "&emsp;Không được trống!<br/>";
   }
-  if(message=="")
+  else if(message=="")
   {
     message_error.innerHTML = "&emsp;Không được trống!<br/>";
   }
@@ -24,7 +24,7 @@ function send_mail(params)
   {
     var tempParams = {
     from_email : from_email,
-    to_email : to_mail,
+    to_email : to_email,
     subject : subject,
     message : message,
     };
@@ -53,7 +53,6 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
-          console.log(window.scrollY);
         }
         else
         {
@@ -71,7 +70,6 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
-          console.log(window.scrollY);
         }
         else
         {
@@ -89,7 +87,6 @@ function send_mail(params)
           menu.style.backgroundColor = '#776CE1';
           menu.style.border = '1px solid white';
           menu.style.transition = '0.5s';
-          console.log(window.scrollY);
         }
         else
         {
