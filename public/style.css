@@ -179,7 +179,7 @@ html,body
 	z-index: 2;
 	width: 155px;
 	height: 155px;
-	border-radius: 360px;
+	border-radius: 180px;
 	cursor: pointer;
 	box-sizing: border-box;
 	transition: all .3s ease-out;
@@ -187,6 +187,8 @@ html,body
 	-webkit-transition: all .3s ease-out;
 	-moz-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
+	vertical-align: middle;
+	object-fit:cover;
 }
 
 #avatar:hover
@@ -247,7 +249,7 @@ html,body
 #social_media
 {
 	position: relative;
-	top: 20%;
+	top: 16%;
 	z-index: 2;
 }
 
@@ -255,22 +257,15 @@ html,body
 {
 	background-color: grey;
 	border-radius: 360px;
+	padding: 17px 21px 17px 21px;
 }
 
 #social_media a i
 {
-	font-size: 20px;
+	font-size: 50px;
 	color: white;
 }
 
-#social_media a:nth-child(1)
-{
-	padding: 17px 21px 17px 21px;
-}
-#social_media a:nth-child(2)
-{
-	padding: 17px 15px 17px 15px;
-}
 
 #social_media a:hover
 {
